@@ -1,0 +1,64 @@
+<div class="home chip-lists">
+  <div class="action-buttons">
+    <button mat-button *ngFor="let facet of facets | keyvalue: rankOrder"
+            (click)="add(facet.value)"
+    >
+      <mat-icon>{{ facet.value.icon }}</mat-icon>
+      {{ facet.value.name }}
+    </button>
+  </div>
+
+  <mat-form-field class="form-field" *ngIf="model">
+    <input
+      matInput #typeahead
+      type="text"
+      title=""
+      [placeholder]="model.placeholder"
+      [formControl]="myControl"
+      [matAutocomplete]="auto">
+    <mat-autocomplete
+      #auto="matAutocomplete"
+      (optionSelected)="makeChip($event.option.value)"
+      [displayWith]="displayFn">
+      <mat-option *ngFor="let item of model.filteredItems | async" [value]="item">
+        {{ item[model.displayField] }}
+      </mat-option>
+    </mat-autocomplete>
+    <button *ngIf="myControl.value" mat-button
+            aria-label="Clear" class="closer"
+            matSuffix mat-icon-button
+            (click)="clear()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="form-field" *ngIf="q">
+    <input matInput #query
+           placeholder="Titel"
+           title=""
+           [formControl]="queryControl"
+           (keyup.enter)="submitQuery()"
+    >
+    <button *ngIf="query.value"
+            mat-button matSuffix mat-icon-button
+            aria-label="Clear"
+            class="closer"
+            (click)="clearQuery()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="divider"></div>
+
+  <app-home-chips
+    (remove)="remove($event)"
+    (clearChips)="clearChips()"
+    [chips]="chips"></app-home-chips>
+
+  <app-album-list
+    [albums]="albums"
+    *ngIf="albums.length"
+  ></app-album-list>
+
+  <app-recent></app-recent>
+</div>

@@ -1,0 +1,214 @@
+@import '../../node_modules/@angular/material/theming';
+//@include mat-core();
+
+$my-app-primary: mat-palette($mat-blue-grey);
+$my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
+
+//.alternate-theme {
+//  $alternate-primary: mat-palette($mat-light-blue);
+//  $alternate-accent:  mat-palette($mat-yellow, 400);
+//  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+//  @include angular-material-theme($alternate-theme);
+//}
+
+$darkbackground: #888888;
+$darkerbackground: #888888;
+$cardbackground: #666666;
+$darkcolor: #eeeeee;
+
+
+.alternate-theme {
+  // background-color werkt het beste tot op niveau van html background
+  // maar maakt alsnog home view na focus op invoerveld onleesbaar
+  //background-color: $darkbackground;
+
+  body {
+    background-color: $darkbackground;
+  }
+
+  //.cdk-overlay-container {
+  //  background-color: inherit;
+  //}
+  .cdk-overlay-pane {
+    background-color: $darkbackground;
+
+    .mat-menu-panel {
+      background-color: $darkbackground;
+
+      span {
+        color: $darkcolor;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .mat-toolbar,
+  .mat-drawer-container,
+  .mat-table,
+  .mat-dialog-container {
+    background-color: $darkbackground;
+    color: $darkcolor;
+  }
+
+  .mat-expansion-panel,
+  .mat-list-item {
+    background-color: $darkerbackground;
+    color: $darkcolor;
+  }
+
+  .mat-flat-button {
+    background-color: #7f7f7f;
+    color: $darkcolor;
+  }
+
+  .mat-drawer-container {
+    position: inherit;
+  }
+
+  .pieces,
+  .mat-expansion-panel-header-title,
+  .mat-expansion-panel-header-description,
+  .mat-cell,
+  .mat-footer-cell,
+  .mat-sort-header-button,
+  .mat-card {
+    color: $darkcolor;
+  }
+
+  .mat-form-field-label {
+    color: #ceffff;
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: #aeffff;
+  }
+
+  .mat-icon {
+    color: $darkcolor;
+  }
+
+  .mat-form-field-infix input {
+    background-color: rgba(215, 215, 215, .8);
+    color: #333;
+  }
+
+  .tags {
+    .key {
+      color: #eeffdd;
+    }
+
+    .value {
+      color: #eeeeee;
+    }
+  }
+
+  .mat-card,
+  .home {
+    background-color: $cardbackground;
+  }
+
+  .mat-card-title,
+  .cuesheet-header,
+  .part-line,
+  nav a,
+  .movie-card-content a,
+  .mat-menu-panel button:not([disabled]),
+  .mat-card-content {
+    color: $darkcolor;
+  }
+
+  .wiki-footer a {
+    color: $darkcolor !important;
+  }
+
+
+  .book-card-content a,
+  .author-header {
+    color: #ffa;
+  }
+  .mat-form-field-label.mat-focused {
+    color: lightblue;
+  }
+  .home,
+  nav
+  {
+    background-color: $darkerbackground;
+    color: $darkcolor;
+  }
+  nav a:not(.selected):hover {
+    background-color: $cardbackground;
+  }
+  main {
+    background-color: $darkerbackground;
+  }
+  .album {
+    .opener {
+      color: #ddd;
+    }
+    .opener:hover {
+      color: #3366dd;
+    }
+    .album-title {
+      color: #bfbfbf;
+    }
+  }
+  .chip-lists {
+    .chip-composer {
+      background-color: #887777;
+      color: $darkcolor;
+    }
+    .chip-performer {
+      background-color: #778877;
+      color: $darkcolor;
+    }
+    .chip-instrument {
+      background-color: #777788;
+      color: $darkcolor;
+    }
+    .chip-tag {
+      background-color: #787878;
+      color: $darkcolor;
+    }
+    .chip-title {
+      background-color: #987878;
+      color: $darkcolor;
+    }
+  }
+  .play-cuesheet {
+    color: #ffaaaa;
+  }
+  .play-cuesheet-invalid {
+    color: #ff3333;
+  }
+  .play-cuesheet-played {
+    color: #987898;
+  }
+  .play-piece,
+  .file-play {
+    color: #66aaff;
+  }
+  .play-piece-played,
+  .file-played {
+    color: lightgreen;
+  }
+  .app-recent .row:nth-child(odd) {
+    background-color: #7f7f7f;
+  }
+  .mat-icon.cuesheet-control {
+    &.sublime {
+      color: lightblue;
+    }
+    &.rename-parts {
+      color: lightgreen;
+    }
+    &.delete {
+      color: red;
+    }
+    &.rename-cuesheet {
+      color: orange;
+    }
+  }
+}

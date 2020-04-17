@@ -1,0 +1,28 @@
+<div class="movies-start">
+
+  <div class="selection-row">
+    <mat-icon>search</mat-icon>
+      <app-director-autocomplete></app-director-autocomplete>
+      <div class="selection-middle">
+        <app-speler-autocomplete></app-speler-autocomplete>
+      </div>
+      <app-title-autocomplete></app-title-autocomplete>
+  </div>
+
+  <div>
+    <app-movies-to-new-from-imdb></app-movies-to-new-from-imdb>
+  </div>
+
+  Aan het bekijken
+  <app-movies-recently-played wrap="nowrap" more="recentlyplayed" count="12">
+  </app-movies-recently-played>
+
+  Pas bekeken
+  <app-movies-recently-seen wrap="nowrap" more="recentlyseen" count="12">
+  </app-movies-recently-seen>
+
+  Nieuwste aanwinsten
+  <app-movies-recently-added wrap="nowrap" more="recentlyadded" count="12">
+  </app-movies-recently-added>
+
+</div>

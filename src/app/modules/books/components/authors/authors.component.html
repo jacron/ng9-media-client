@@ -1,0 +1,16 @@
+<div class="authors" *ngIf="authors">
+
+  <div class="header">
+    Auteurs ({{ authors.length }})
+    <span *ngIf="filteredCount">({{ filteredCount }})</span>
+  </div>
+
+  <app-persons-table
+    [fields]="fields"
+    [dataSource]="dataSource"
+    [displayedColumns]="displayedColumns"
+    (select)="edit($event)"
+    (setFilter)="applyFilter($event)"
+  ></app-persons-table>
+
+</div>

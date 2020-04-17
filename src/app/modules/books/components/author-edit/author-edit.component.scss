@@ -1,0 +1,33 @@
+.first,
+.born {
+  width: calc(50% - 6px);
+  margin-right: 12px;
+}
+.last,
+.died {
+  width: calc(50% - 6px);
+}
+.first,
+.last,
+.born,
+.died {
+  display: inline-block;
+}
+.dates {
+  margin-bottom: 6px;
+}
+.thumb {
+  width: 100px;
+}
+.closer {
+  float: right;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 10px;
+  &:hover {
+    background-color: #666;
+  }
+}
+form {
+  margin-top: 30px;
+}

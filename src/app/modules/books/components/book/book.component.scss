@@ -1,0 +1,27 @@
+.author {
+  font-size: 18px;
+  font-style: italic;
+}
+.second,
+.third {
+  padding-left: 64px;
+}
+.second {
+  max-width: 450px;
+}
+.third {
+  max-width: 33%;
+}
+.notes {
+  width: 300px;
+  margin-bottom: 18px;
+}
+.cmds {
+  margin-bottom: 18px;
+}
+.book-row {
+  display: flex;
+}
+button {
+  font-size: 18px;
+}

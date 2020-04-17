@@ -1,0 +1,34 @@
+.recently-played {
+  margin-bottom: 18px;
+}
+.play {
+  opacity: .9;
+  padding: 8px;
+  color: orange;
+  cursor: pointer;
+}
+.play:hover {
+  color: #dd8888;
+}
+.played {
+  color: brown;
+}
+.invalid {
+  color: red;
+}
+.piece-name {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+.first-col {
+  max-width: 350px;
+  width: 350px;
+}
+.app-recent {
+  margin-top: 60px;
+}
+img {
+  width: 80px;
+}
+

@@ -1,0 +1,33 @@
+<mat-card-header>
+  <button mat-icon-button
+          class="to-list"
+          (click)="emitToList()"
+          *ngIf="list"
+          matTooltip="{{ list.title }} ({{ list.count }})"
+  >
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span class="horizontal-spacer"></span>
+  <button mat-icon-button
+          (click)="emitBack()"
+          *ngIf="navBackwards">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+  </button>
+  <!--<span mat-line class="album-title" (click)="editAlbum()">-->
+      <!--{{ album.Title }}</span>-->
+  <span class="horizontal-spacer"></span>
+  <button mat-icon-button
+          *ngIf="navForwards"
+          (click)="emitForward()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+  </button>
+  <app-album-menu
+    [album]="album"
+    (updateimage)="emitUpdateImage($event)"
+    (reload)="emitReload($event)"
+  ></app-album-menu>
+</mat-card-header>
+<mat-card-header>
+    <span mat-line class="album-description">
+      {{ album?.Description }}</span>
+</mat-card-header>

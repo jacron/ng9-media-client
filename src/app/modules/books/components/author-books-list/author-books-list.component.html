@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-header class="books-list-header">
+    {{ books.length }} {{ booksCountLabel(books.length) }}
+  </mat-card-header>
+  <mat-card-content class="books-list">
+    <div *ngFor="let book of books">
+      <span (click)="edit(book)"
+            [title]="book.id"
+            class="link">{{book.title}}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

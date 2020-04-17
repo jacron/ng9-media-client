@@ -1,0 +1,30 @@
+<mat-card class="author-card">
+  <div class="author-header">
+    <span (click)="toAuthor()"
+          [title]="author.id"
+    class="link">
+      {{ author.first }} {{ author.last }}
+    </span>
+    <div class="author-menu">
+      <app-author-edit-menu
+        [author]="author"
+        (authorChange)="changeAuthor()"
+        (close)="onClose($event)"
+      ></app-author-edit-menu>
+    </div>
+  </div>
+  <div class="image-container">
+    <img [src]="imageUrl + author.id + refresh"
+         default="assets/images/one.png"
+         class="author-image" alt="author image">
+  </div>
+  <mat-card-content>
+    <app-person-form
+      [formGroup]="formGroup"
+      [options]="options"
+      [errorTable]="errors"
+      (save)="save()"
+      (close)="closeDialog($event)"
+    ></app-person-form>
+  </mat-card-content>
+</mat-card>

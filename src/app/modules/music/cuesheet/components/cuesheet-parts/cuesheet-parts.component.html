@@ -1,0 +1,31 @@
+<div class="cuesheet-parts">
+
+  <span *ngIf="performers">
+    <span>performers: </span>
+      <a *ngFor="let p of performers; let i = index"
+         title="add performer"
+         (click)="addPerformer(p)">
+        {{ p }}<span *ngIf="i < performers.length - 1"
+      >,</span>
+      </a>
+  </span>
+
+  <div class="parts-lists">
+      <div
+        class="part-line"
+        *ngFor="let trackname of tracknames">
+        <span>{{ trackname }}</span>
+      </div>
+
+      <div
+        class="part-line link"
+        *ngFor="let file of files"
+        (click)="play(file)"
+        [class.file-played]="file.played"
+        [class.selected]="file.ID == idpiece"
+      >
+        <span mat-line>{{ display(file) }}</span>
+      </div>
+  </div>
+
+</div>

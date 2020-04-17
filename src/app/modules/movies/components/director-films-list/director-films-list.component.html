@@ -1,0 +1,12 @@
+<mat-card *ngIf="films">
+  <mat-card-header class="films-list-header">
+    {{ director.nfilms }} {{ filmsCountLabel(director.nfilms) }}
+  </mat-card-header>
+  <mat-card-content class="films-list">
+    <div *ngFor="let film of films">
+      <div (click)="toFilm(film.ID)"
+            [title]="film.id"
+            class="link">{{film.Titel}}</div>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,19 @@
+.book-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  //flex-direction: column;
+  justify-content: space-around;
+}
+.book-card {
+  margin: 30px;
+}
+.author-wrapper {
+  display: flex;
+}
+.col-edit {
+  margin-left: 12px;
+  width: 280px;
+}
+.col-wiki {
+  margin-left: 12px;
+}

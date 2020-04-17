@@ -1,0 +1,37 @@
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item
+          (click)="aliasParts()"
+  >
+    <mat-icon class="cuesheet-control rename-parts"
+              waves-light waves-effect
+    >edit</mat-icon>
+    <span>Hernoem delen</span>
+  </button>
+  <button mat-menu-item
+          (click)="renameTitle()"
+  >
+    <mat-icon class="cuesheet-control rename-cuesheet"
+              waves-light waves-effect
+    >edit</mat-icon>
+    <span>Hernoem cuesheet</span>
+  </button>
+    <button mat-menu-item
+            (click)="edit()"
+    >
+      <mat-icon class="cuesheet-control sublime"
+                waves-light waves-effect
+      >edit</mat-icon>
+      <span>Bewerk tekst</span>
+    </button>
+  <button mat-menu-item
+          (click)="remove()"
+  >
+    <mat-icon class="cuesheet-control delete"
+              waves-light waves-effect
+    >clear</mat-icon>
+    <span>Verwijder</span>
+  </button>
+</mat-menu>

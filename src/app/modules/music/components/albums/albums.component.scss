@@ -1,0 +1,10 @@
+.collectie-card {
+  width: 100px;
+  height: 200px;
+  margin: 20px auto;
+}
+.app-collecties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

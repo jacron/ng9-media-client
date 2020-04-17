@@ -1,0 +1,48 @@
+<mat-chip-list *ngIf="album" class="chip-lists">
+  <mat-chip *ngFor="let composer of album.album_componisten"
+            class="chip-composer"
+            [removable]="removable"
+            (removed)="removeComposer(composer)">
+    <img
+      *ngIf="showimage"
+      src="{{ imgUrl }}{{ composer.ID }}/componist/-1/20"
+      (click)="openPicComposer(composer)"
+      class="avatar">
+    <a (click)="toComposer(composer)">{{ composer.FullName }}</a>
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+  <mat-chip *ngFor="let performer of album.album_performers"
+            class="chip-performer"
+            [removable]="removable"
+            (removed)="removePerformer(performer)">
+    <img
+      *ngIf="showimage"
+      src="{{ imgUrl }}{{ performer.ID }}/performer/-1/20"
+      (click)="openPicPerformer(performer)"
+      class="avatar">
+    <a (click)="toPerformer(performer)">{{ performer.FullName }}</a>
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+  <mat-chip *ngFor="let tag of album.album_tags"
+            class="chip-tag"
+            [removable]="removable"
+            (removed)="removeTag(tag)">
+    <a (click)="toTag(tag)">{{ tag.Name }}</a>
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+  <mat-chip *ngIf="album.album_instrument && album.album_instrument.Name &&
+  album.album_instrument.Name.length > 0"
+            class="chip-instrument"
+            [removable]="removable"
+            (removed)="removeInstrument()">
+    <a (click)="toInstrument()">{{ album.album_instrument.Name }}</a>
+    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+  </mat-chip>
+  <button
+    *ngIf="editable"
+    (click)="addSome()"
+    style="margin-left: 8px"
+    mat-button>
+    <mat-icon style="color: lightgrey">edit</mat-icon>
+    </button>
+</mat-chip-list>

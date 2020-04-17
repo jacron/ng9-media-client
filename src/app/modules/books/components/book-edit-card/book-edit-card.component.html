@@ -1,0 +1,31 @@
+<mat-card class="book-card">
+  <div class="book-header">
+    <span (click)="toBook()"
+          [title]="book.id"
+          class="link">
+      {{ book.title }}
+    </span>
+    <div class="book-menu">
+      <app-book-edit-menu
+        [book]="book"
+        (bookChange)="changeBook()"
+        (close)="onClose($event)"
+      ></app-book-edit-menu>
+    </div>
+  </div>
+  <div class="image-container">
+    <img [src]="viewUrl + book.id + refresh"
+         default="assets/images/one.png"
+         class="book-image" alt="book image">
+  </div>
+  <mat-card-content>
+    <app-person-form
+      [formGroup]="formGroup"
+      [options]="options"
+      [errorTable]="errors"
+      imgurl="imgurl"
+      (save)="save()"
+      (close)="closeDialog()"
+    ></app-person-form>
+  </mat-card-content>
+</mat-card>

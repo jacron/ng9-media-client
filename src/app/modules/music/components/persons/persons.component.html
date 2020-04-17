@@ -1,0 +1,7 @@
+<mat-list *ngIf="(persons | startwith:startletter:'LastName') as result">
+  <mat-list-item *ngFor="let person of result">
+    <a (click)="toSearch(person.ID)">
+      {{ person.FirstName }} {{ person.LastName }}
+    </a>
+  </mat-list-item>
+</mat-list>

@@ -1,0 +1,39 @@
+<div class="books-start">
+  <div class="selection-row">
+    <div>
+      <app-genre-select [genre]="genre" (genreChange)="onGenreChange($event)"></app-genre-select>
+    </div>
+    <div>
+      <app-author-autocomplete></app-author-autocomplete>
+    </div>
+    <div>
+      <app-title-autocomplete></app-title-autocomplete>
+    </div>
+    <div>
+      <app-isbn-input (isbnchange)="onIsbnChange($event)"></app-isbn-input>
+    </div>
+    <div>
+      <app-title-query-input (titlechange)="onTitleChange($event)"></app-title-query-input>
+    </div>
+    <mat-form-field>
+      <input matInput placeholder="limit"
+             name="count"
+             [value]="recentLimit.toString()"
+             [formControl]="recentLimitFormControl"
+             (change)="onLimitChange()">
+    </mat-form-field>
+    <div>
+      <span class="link" (click)="createBarcodes()">barcodes</span>
+<!--      <a *ngIf="barcodesCreated" href=""></a>-->
+    </div>
+  </div>
+  <div class="not-found" *ngIf="notInCatalogue">
+    <div>Niet aanwezig in de catalogus</div>
+    <app-book-proposal [isbn]="isbn"></app-book-proposal>
+  </div>
+  <div class="book-wrapper">
+    <div *ngFor="let book of books" class="book-card">
+      <app-book-card [(book)]="book"></app-book-card>
+    </div>
+  </div>
+</div>

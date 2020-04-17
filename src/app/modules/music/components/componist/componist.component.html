@@ -1,0 +1,18 @@
+<div class="app-componist" *ngIf="componisten">
+
+  <div class="header">
+    Componisten ({{ componisten.length }})
+    <span *ngIf="filteredCount">({{ filteredCount }})</span>
+  </div>
+
+  <app-persons-table
+    [fields]="fields"
+    [displayedColumns]="displayedColumns"
+    [dataSource]="dataSource"
+    [saved]="saved"
+    [removed]="removed"
+    (select)="edit($event)"
+    (setFilter)="setFilter($event)"
+  ></app-persons-table>
+
+</div>

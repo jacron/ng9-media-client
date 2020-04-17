@@ -1,0 +1,46 @@
+<div class="opener album-pieces" (click)="openPieces()">
+
+  <div class="count">{{ album?.pieces.length }} bestanden</div>
+  <mat-icon
+            [class.expanded]="album?.expanded"
+            waves-light waves-effect
+  >{{ chevron }}
+  </mat-icon>
+
+  <div class="pieces" [class.visible]="album?.expanded">
+    <div *ngFor="let piece of pieces" class="pieces-list">
+
+      <mat-icon class="play play-piece"
+                waves-light waves-effect
+                title="Media Center 24"
+                [class.play-piece-played]="piece.played"
+                (click)="play($event, piece.ID)">
+        play_circle_filled</mat-icon>
+
+      <mat-icon class="play play-piece-2"
+                waves-light waves-effect
+                title="VLC"
+                [class.play-piece-played]="piece.played"
+                (click)="play2($event, piece.ID)">
+        play_circle_filled</mat-icon>
+
+      <div class="text-container" (click)="editPieceName($event, piece)">
+        <div mat-line
+             class="title"
+             [class.selected]="piece.ID == idpiece">
+          {{ displayName(piece.Name) }}
+        </div>
+      </div>
+
+      <mat-chip *ngIf="piece.LibraryCode"
+                class="composers"
+                [removable]="removable"
+                (remove)="removeCode(piece)">
+        <a (click)="toCode(piece.LibraryCode)">{{ piece.LibraryCode }}</a>
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+      </mat-chip>
+
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,51 @@
+<h2>{{ person.Name }}</h2>
+<mat-dialog-content>
+<div #name contenteditable="true"
+      class="name"
+      [textContent]="person.Name"
+      (input)="model=name.innerText"
+      (keydown)="fieldKeydown($event, name.innerText, 'Name')">
+</div>
+  <div #role contenteditable="true"
+    class="role"
+    [textContent]="person.Role"
+    (input)="model=role.innerText"
+    (keydown)="fieldKeydown($event, role.innerText, 'Role')">
+  </div>
+<div class="years">
+  <div #birth contenteditable="true"
+        class="title"
+        [textContent]="person.Birth"
+        (input)="model=birth.innerText"
+        (keydown)="fieldKeydown($event, birth.innerText, 'Birth')">
+  </div> - <div #death contenteditable="true"
+         class="title"
+         [textContent]="person.Death"
+         (input)="model=death.innerText"
+         (keydown)="fieldKeydown($event, death.innerText, 'Death')">
+    </div>
+</div>
+<img src="{{ imgUrl }}{{ person.ID }}/{{ data.type }}"
+     (click)="openPicPerson()"
+     class="thumb">
+</mat-dialog-content>
+<mat-dialog-actions class="controls">
+  <button mat-menu-item waves-light waves-effect mdbRippleRadius
+    (click)="toSearch()">
+    <mat-icon>assignment</mat-icon>
+    <span>Albums</span>
+    (<span>{{ albumCount }}</span>)
+  </button>
+  <a href="{{googleUrl + person.Name }}"
+     target="'person">
+    <button mat-menu-item waves-light waves-effect mdbRippleRadius>
+      <mat-icon>search</mat-icon>
+      <span>Google</span>
+    </button>
+  </a>
+  <button mat-menu-item waves-light waves-effect mdbRippleRadius
+    (click)="paste()">
+    <mat-icon>content_paste</mat-icon>
+    <span>Paste image</span>
+  </button>
+</mat-dialog-actions>

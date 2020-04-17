@@ -1,0 +1,130 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "app/app-variables";
+
+@import '~ngx-toastr/toastr.css';
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+li {
+  list-style: none;
+}
+.horizontal-spacer {
+  flex: 1 1 auto;
+}
+.vertical-spacer {
+  flex-grow: 1;
+}
+.album-control {
+  cursor: pointer;
+  padding: 2px 4px;
+  margin: 0 6px;
+  transition: color $control-hover-transition-time;
+  font-size: 18px;
+  &:hover {
+    color: $control-hover-color;
+  }
+}
+.img-container {
+  width: 100px;
+  max-width: 120px;
+  overflow-x: hidden;
+  float: left;
+  margin-right: 8px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.app-recent .row:nth-child(odd) {
+  background-color: #efefef;
+}
+.col {
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+.link {
+  cursor: pointer;
+  text-decoration: none;
+}
+div:focus {
+  outline: 0 solid transparent;
+}
+.search-form .mat-list-base {
+  padding-top: 38px;
+}
+.tags {
+  .key {
+    color: brown;
+  }
+  .value {
+    color: #333;
+  }
+}
+.album {
+  .opener {
+    color: #999;
+  }
+  .opener:hover {
+    color: #0033bb;
+  }
+}
+nav a:not(.selected):hover {
+  background-color: $mat-button-hover-background;
+  cursor: pointer;
+}
+.chip-lists {
+  .mat-chip.chip-composer {
+    background-color: #ffeeee;
+  }
+  .mat-chip.chip-performer {
+    background-color: #eeffee;
+  }
+  .mat-chip.chip-instrument {
+    background-color: #eeeeff;
+  }
+  .mat-chip.chip-tag {
+    background-color: #cfefef;
+  }
+  .mat-chip.chip-title {
+    background-color: #eeeeaf;
+  }
+  .mat-chip.chip-collection {
+    background-color: #eeeeee;
+  }
+}
+.play-piece,
+.file-play {
+  color: blue;
+}
+.play-cuesheet {
+  color: orange;
+}
+.play-cuesheet-invalid {
+  color: red;
+}
+.play-piece-played,
+.file-played {
+  color: green;
+}
+.play-cuesheet-played {
+  color: brown;
+}
+.mat-icon.cuesheet-control {
+  &.sublime {
+    color: brown;
+  }
+  &.rename-parts {
+    color: green;
+  }
+  &.delete {
+    color: red;
+  }
+  &.rename-cuesheet {
+    color: orange;
+  }
+}

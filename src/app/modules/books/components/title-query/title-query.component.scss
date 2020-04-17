@@ -1,0 +1,14 @@
+.selection-row {
+  display: flex;
+  & > div:first-child {
+    margin-right: 12px;
+  }
+}
+.book-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.book-card {
+  margin: 30px;
+}

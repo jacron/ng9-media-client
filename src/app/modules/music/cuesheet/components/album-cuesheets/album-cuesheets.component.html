@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div *ngFor="let cuesheet of cuesheets">
+      <mat-card class="cuesheet-card">
+        <div class="menu-container">
+          <app-cuesheet-menu
+            [album]="album"
+            [cuesheet]="cuesheet"
+            (titleChange)="cuesheet.title = $event.title"
+            (removed)="removed($event)"
+          ></app-cuesheet-menu>
+        </div>
+        <a (click)="play($event, cuesheet.id)" class="link">
+          <div class="cuesheet-header">
+            <div class="cuesheet-card-title">
+              {{ cuesheet.title }}
+            </div>
+          </div>
+        </a>
+        <app-cuesheet-parts
+        [album]="album"
+        [idpiece]="idpiece"
+        [cuesheet]="cuesheet"
+        ></app-cuesheet-parts>
+      </mat-card>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<mat-chip-list *ngIf="album" class="chips-lists">
+  <mat-chip *ngFor="let composer of album.album_componisten"
+            class="chip-composer">
+    {{ composer.FullName }}
+  </mat-chip>
+  <mat-chip *ngFor="let performer of album.album_performers"
+            class="chip-performer">
+  {{ performer.FullName }}
+  </mat-chip>
+  <mat-chip *ngFor="let tag of album.album_tags"
+            class="chip-tag">
+    {{ tag.Name }}
+  </mat-chip>
+  <mat-chip *ngIf="album.album_instrument && album.album_instrument.Name &&
+  album.album_instrument.Name.length > 0"
+            class="chip-instrument">
+    {{ album.album_instrument.Name }}
+  </mat-chip>
+</mat-chip-list>

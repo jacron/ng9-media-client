@@ -1,0 +1,14 @@
+<app-search-form
+  [params]="params"
+  [composers]="composers"
+  [performers]="performers"
+  [collections]="collections"
+  [tags]="tags"
+  [instruments]="instruments"
+  (albums)="getAlbums($event)"
+></app-search-form>
+<div class="seperator"></div>
+<app-album-list
+  [albums]="albums"
+  [q]="search"
+></app-album-list>

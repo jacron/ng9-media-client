@@ -1,0 +1,9 @@
+<div class="app-performer">
+<app-alphabet
+  (select)="selectLetter($event)"></app-alphabet>
+<app-persons
+  [persons]="performers"
+  idname="idperf"
+  [startletter]="startletter">
+</app-persons>
+</div>

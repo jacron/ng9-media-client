@@ -1,0 +1,21 @@
+<div class="app-collecties"
+  *ngIf="(collections | startwith:startletter:'Title') as result">
+  <div class="" *ngFor="let collectie of result">
+    <mat-card class="collectie-card">
+        <div class="img-container">
+          <a [routerLink]="['/collection', collectie.ID]">
+            <img alt="thumb"
+              [src]="imageUrl(collectie.ID)"
+              class="thumb"
+            >
+          </a>
+        </div>
+      <mat-card-content>
+        <div>
+          {{ collectie.Title }}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+

@@ -1,0 +1,17 @@
+.selection-row {
+  display: flex;
+  & > div {
+    margin-right: 24px;
+  }
+}
+.book-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.book-card {
+  margin: 30px 30px 30px 0;
+}
+.website {
+  margin: 12px 0 6px 0;
+}

@@ -1,0 +1,33 @@
+<mat-card class="author-card">
+  <div class="author-header">
+    <span (click)="toDirector()"
+          [title]="director.id"
+          class="link">
+      {{ director.Voornaam }} {{ director.Achternaam}}
+    </span>
+    <div class="director-menu">
+      <app-director-edit-menu
+        [director]="director"
+        (directorChange)="changeDirector()"
+        (toggle)="toggle()"
+        (close)="onClose($event)"
+        (wiki)="changeWiki($event)"
+      ></app-director-edit-menu>
+    </div>
+  </div>
+  <div class="image-container">
+    <img [src]="viewUrl + director.id + refresh"
+         default="assets/images/one.png"
+         class="director-image" alt="afbeelding regisseur">
+  </div>
+  <mat-card-content>
+    <app-person-form
+      [formGroup]="formGroup"
+      [options]="options"
+      [errorTable]="errors"
+      imgurl="ImageUrl"
+      (save)="save()"
+      (close)="closeDialog($event)"
+    ></app-person-form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,38 @@
+@import "../app/app-variables";
+
+.home .mat-fab .mat-button-wrapper {
+  padding: 0;
+}
+.container-main .mat-drawer-backdrop.mat-drawer-shown {
+  background-color: transparent;
+}
+.search {
+  .form-field .mat-form-field-infix {
+    padding-right: 30px;
+  }
+  .form-field .mat-form-field-underline {
+    height: 0;
+  }
+}
+.dialog-customize {
+  .mat-selection-list:focus {
+    outline: 0 solid transparent;
+  }
+}
+.mat-form-field {
+  font-size: 20px;
+}
+.mat-form-field-label {
+  color: #66aaff;
+}
+.mat-drawer-container {
+  width: 100%;
+  min-height: 100%;
+}
+.mat-drawer-content {
+  overflow: inherit !important;
+}
+.book-card .mat-card-header-text {
+  margin: 8px 6px 0 6px;
+  overflow: hidden;
+}

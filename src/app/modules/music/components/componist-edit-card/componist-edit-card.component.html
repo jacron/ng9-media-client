@@ -1,0 +1,31 @@
+<mat-card class="author-card">
+  <div class="author-header">
+    <span (click)="toComposer()"
+          [title]="composer.ID"
+          class="link">
+      {{ composer.FirstName }} {{ composer.LastName}}
+    </span>
+    <div class="composer-menu">
+      <app-componist-edit-menu
+        [composer]="composer"
+        (composerChange)="changeComposer()"
+        (close)="onClose($event)"
+        (wiki)="changeWiki($event)"
+      ></app-componist-edit-menu>
+    </div>
+  </div>
+  <div class="image-container">
+    <img [src]="viewUrl + refresh"
+         default="assets/images/one.png"
+         class="composer-image" alt="afbeelding regisseur">
+  </div>
+  <mat-card-content>
+    <app-person-form
+      [formGroup]="formGroup"
+      [options]="options"
+      [errorTable]="errors"
+      (save)="save()"
+      (close)="closeDialog($event)"
+    ></app-person-form>
+  </mat-card-content>
+</mat-card>

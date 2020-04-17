@@ -1,0 +1,28 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.album-card {
+  width: 180px;
+  height: 400px;
+  margin: 20px auto;
+  overflow-y: hidden;
+}
+.album-image {
+}
+.album-header {
+  height: 140px;
+  overflow: hidden;
+}
+.image-container {
+  height: 316px;
+  overflow: hidden;
+  margin: 0 -16px;
+}
+.filler {
+  //height: 600px;
+  //width: 1px;
+  //background-color: #3366dd;
+}

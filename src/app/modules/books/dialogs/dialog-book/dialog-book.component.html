@@ -1,0 +1,11 @@
+<div class="card-wrapper">
+  <app-book-edit-card
+    [(book)]="book"
+    [refresh]="refresh"
+    (close)="onClose($event)"
+  ></app-book-edit-card>
+  <div class="second-column">
+    <app-book-remote [book]="book" *ngIf="book.isbn"
+    ></app-book-remote>
+  </div>
+</div>

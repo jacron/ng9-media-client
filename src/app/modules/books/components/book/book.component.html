@@ -1,0 +1,35 @@
+<div class="book-details" *ngIf="book">
+  <div class="book-row">
+    <app-book-card [(book)]="book"></app-book-card>
+    <div class="second">
+      <div class="notes" *ngIf="!showEdit">
+        {{ book.notes }}
+      </div>
+      <div class="cmds">
+        <button (click)="edit()">edit</button>
+        <button (click)="add()">+</button>
+      </div>
+      <app-book-edit *ngIf="showEdit" [save]="true" [(book)]="book">
+      </app-book-edit>
+    </div>
+    <div class="third">
+      <div class="cmds">
+        <button (click)="remote('bolcom')" [disabled]="!book.isbn">
+          bolcom</button>
+        <button (click)="remote('kb')" [disabled]="!book.isbn">
+          kb</button>
+        <button (click)="remote('isbndb')" [disabled]="!book.isbn">
+          isbndb</button>
+      </div>
+
+      <div *ngIf="notfound">{{ notfound }}: niet gevonden</div>
+      <div *ngIf="proposal" class="website">
+        <a [href]="proposal.url" class="link" target="_blank">
+          {{ proposal?.source }}</a>
+      </div>
+      <app-book-edit [(book)]="proposal" [discard]="false" [save]="false"
+                     *ngIf="proposal"></app-book-edit>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,131 @@
+.first {
+  max-width: 320px;
+}
+.chips {
+  margin: 14px 0 14px 14px;
+  display: flex;
+  align-items: baseline;
+}
+.cuesheets {
+  margin-top: 20px;
+}
+.album {
+  margin: 90px 0 20px 0;
+}
+.navig {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 40px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 50px;
+  padding: 5px 0 0 0;
+}
+.navig:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.navig.left {
+  left: 0;
+}
+.navig.right {
+  right: 0;
+}
+.selected {
+  font-weight: bold;
+}
+.play {
+  opacity: .6;
+  position: relative;
+  top: 7px;
+  color: orange;
+  cursor: pointer;
+}
+.played {
+  color: brown;
+}
+.invalid {
+  color: red;
+}
+.selected-cuesheet {
+  margin-top: 20px;
+}
+.text-container {
+  display: inline-block;
+}
+.title {
+  color: brown;
+  max-width: 450px;
+  white-space: nowrap;
+  padding: 12px;
+}
+.title.invalid {
+  color: #666666;
+}
+.thumb-container {
+  margin-left: 28px;
+}
+mat-card:focus {
+  outline: 0 solid transparent;
+}
+.album-card {
+  width: 50%;
+  margin-bottom: 10px;
+}
+.album-title {
+  font-size: 20px;
+  padding-top: 8px;
+  font-weight: bold;
+}
+img.thumb {
+  width: 300px;
+  border: 1px solid #bfbfbf;
+}
+.thumb-container {
+  img:nth-child(2) {
+    margin-left: -100px;
+    border: 1px solid #bfbfbf;
+  }
+}
+img.back-thumb {
+  width: 100px;
+  //position: absolute;
+  //margin-top: 225px;
+  //left: 250px;
+  margin-left: -100px;
+  border: 1px solid #bfbfbf;
+}
+.col-cover {
+  max-width: 300px;
+}
+.col-cue {
+  padding-left: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+}
+.col-left {
+  //position: fixed;
+  width: 400px;
+}
+.col-right {
+  //position: fixed;
+  flex: 1;
+}
+.row-album {
+  display: flex;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.album-metatags {
+  margin-left: 12px;
+}
+.album-card {
+  //height: 208px;
+}

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ng9-media-client';
-}
+  appTitle = 'media-client';
+  darkOn = false;
+  // mobileQuery: MediaQueryList;
+
+  setDarkOn(e) {
+    this.darkOn = e;
+  }}
