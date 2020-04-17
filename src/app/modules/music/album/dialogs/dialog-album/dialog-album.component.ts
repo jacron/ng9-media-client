@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {AlbumMenuComponent} from '../../components/album-menu/album-menu.component';
 import {MusicService} from '../../../services/music.service';
 import {Album} from '../../../../../classes/music/Album';

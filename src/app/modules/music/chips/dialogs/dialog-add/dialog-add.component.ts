@@ -4,7 +4,7 @@ import {Tag} from '../../../../../classes/music/Tag';
 import {forkJoin} from 'rxjs';
 import {MusicService} from '../../../services/music.service';
 import {AlbumDetailsComponent} from '../../../album/components/album-details/album-details.component';
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {DialogInputComponent} from '../../../album/dialogs/dialog-input/dialog-input.component';
 import {Instrument} from '../../../../../classes/music/Instrument';
 import {Album} from '../../../../../classes/music/Album';

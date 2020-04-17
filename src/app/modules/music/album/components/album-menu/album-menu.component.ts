@@ -4,7 +4,7 @@ import {MusicService} from '../../../services/music.service';
 import {MenuOption} from '../../../../../classes/shared/MenuOption';
 import {environment} from '../../../../../../environments/environment';
 import {DialogSettingsComponent} from '../../dialogs/dialog-settings/dialog-settings.component';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {DialogAlbumComponent} from '../../dialogs/dialog-album/dialog-album.component';
 import {StateService} from '../../../../../services/state.service';
 import {DialogAddComponent} from '../../../chips/dialogs/dialog-add/dialog-add.component';

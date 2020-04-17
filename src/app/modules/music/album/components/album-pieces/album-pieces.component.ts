@@ -4,7 +4,7 @@ import {MusicService} from '../../../services/music.service';
 import {PieceService} from '../../services/piece.service';
 import {Album} from '../../../../../classes/music/Album';
 import {DialogInputComponent} from '../../dialogs/dialog-input/dialog-input.component';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {UtilService} from '../../../../../services/util.service';
 
 @Component({

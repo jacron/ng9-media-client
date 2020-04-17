@@ -1,7 +1,7 @@
 <div class="dialog-aliassing-parts"
      (keyup)="onKeyup($event)"
 >
-  <div appDialogHeader paddingBottom="24">{{ this.cuesheet.Title }}</div>
+  <div appDialogHeader paddingBottom="24">{{ this.cuesheet.title }}</div>
   <mat-dialog-content>
     <div *ngFor="let file of files">
       {{ file.name }}

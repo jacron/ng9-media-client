@@ -12,6 +12,7 @@ export class AlbumMetatagsComponent implements OnInit, OnChanges {
   @Input() album: Album;
   tags: any[];
   objectKeys = Object.keys;
+  model: string;
 
   constructor(
     private musicService: MusicService

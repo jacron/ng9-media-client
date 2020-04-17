@@ -16,6 +16,7 @@ export class CodeListComponent implements OnInit {
   googleUrl = environment.googleUrl;
   imageUrl = environment.musicServer + '/image/';
   fav = false;
+  model: string;
 
   constructor(
     private musicService: MusicService,

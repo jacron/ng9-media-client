@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {DirectorsComponent} from '../../components/directors/directors.component';
 import {Director} from '../../../../classes/movies/Director';
 import {BooksService} from '../../../books/services/books.service';

@@ -1,5 +1,5 @@
 import {Component, ElementRef, Inject, OnInit, QueryList, ViewChildren} from '@angular/core';
-import {MAT_DIALOG_DATA, MatCheckbox, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {MusicService} from '../../../services/music.service';
 import {Piece} from '../../../../../classes/music/Piece';
 import {PieceService} from '../../services/piece.service';
@@ -8,6 +8,7 @@ import {LcsService} from '../../../services/lcs.service';
 import {UtilService} from '../../../../../services/util.service';
 import {forkJoin} from 'rxjs';
 import {Album} from '../../../../../classes/music/Album';
+import {MatCheckbox} from '@angular/material/checkbox';
 
 @Component({
   selector: 'app-dialog-pieces',

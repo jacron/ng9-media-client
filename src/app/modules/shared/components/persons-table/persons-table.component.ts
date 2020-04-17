@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewChild} from '@angular/core';
-import {MatSort} from '@angular/material';
+import {MatSort} from '@angular/material/sort';
 import {DataField} from '../../../movies/components/directors/DataField';
 
 @Component({

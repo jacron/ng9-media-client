@@ -1,6 +1,6 @@
-import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import {AlbumDetailsComponent} from '../../components/album-details/album-details.component';
+import {Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
+import {MAT_DIALOG_DATA} from '@angular/material/dialog';
+// import {AlbumDetailsComponent} from '../../components/album-details/album-details.component';
 
 @Component({
   selector: 'app-dialog-pic',
@@ -17,7 +17,7 @@ export class DialogPicComponent implements OnInit {
   constructor(
     // public dialogRef: MatDialogRef<AlbumDetailsComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private renderer: Renderer2
+    // private renderer: Renderer2
 
   ) {
     // console.log(data);

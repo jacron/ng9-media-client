@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Author} from '../../../../classes/book/author';
 import {BooksService} from '../../services/books.service';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {Book} from '../../../../classes/book/book';
 import {DialogBookComponent} from '../../dialogs/dialog-book/dialog-book.component';
 

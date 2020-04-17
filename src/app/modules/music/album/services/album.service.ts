@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {DialogAlbumComponent} from '../dialogs/dialog-album/dialog-album.component';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {DialogPicComponent} from '../dialogs/dialog-pic/dialog-pic.component';
 
 @Injectable({

@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {Author} from '../../../../classes/book/author';
 import {AuthorsComponent} from '../../components/authors/authors.component';
 import {BooksService} from '../../services/books.service';
@@ -25,14 +25,14 @@ export class DialogAuthorComponent implements OnInit {
     this.author = {
       ...this.author,
       born
-    }
+    };
   }
 
   useDied(died) {
     this.author = {
       ...this.author,
       died
-    }
+    };
   }
 
   onClose(e) {
@@ -55,7 +55,7 @@ export class DialogAuthorComponent implements OnInit {
   storeWikiPicture(e: string) {
     this.booksService.storeAuthorImgFromUrl(e, this.author.id).subscribe(
       () => this.afterStoreWikiPicture()
-    )
+    );
   }
 
   afterWikipedia(result) {
@@ -63,7 +63,7 @@ export class DialogAuthorComponent implements OnInit {
     if (result) {
       this.wiki = result;
       if (result.image) {
-        this.wiki.imgurl = result.image.source
+        this.wiki.imgurl = result.image.source;
       }
     }
   }
@@ -77,7 +77,7 @@ export class DialogAuthorComponent implements OnInit {
     this.booksService.wikiInfo(name, lng).subscribe(
       result => this.afterWikipedia(result),
       err => this.afterWikipediaError(err)
-    )
+    );
   }
 
   changeWiki(e) {

@@ -2,10 +2,13 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {BooksService} from '../../services/books.service';
 import {StateService} from '../../../../services/state.service';
 import {Author} from '../../../../classes/book/author';
-import {MatDialog, MatSort, MatTableDataSource} from '@angular/material';
+// import {MatDialog, MatSort, MatTableDataSource} from '@angular/material';
 import {DialogAuthorComponent} from '../../dialogs/dialog-author/dialog-author.component';
 import {DataField} from '../../../movies/components/directors/DataField';
 import {environment} from '../../../../../environments/environment';
+import {MatSort} from '@angular/material/sort';
+import {MatDialog} from '@angular/material/dialog';
+import {MatTableDataSource} from '@angular/material/table';
 
 const dataFields: DataField[] = [
   {
@@ -103,7 +106,7 @@ export class AuthorsComponent implements OnInit {
       return;
     }
     const {status, author} = result;
-    switch(status) {
+    switch (status) {
       case 'saved':
         this.afterSaved(author);
         break;
@@ -152,7 +155,7 @@ export class AuthorsComponent implements OnInit {
     this.stateService.setTitle('Auteurs');
     this.booksService.getAuthors().subscribe(
       result => this.afterGetAuthors(result)
-    )
+    );
   }
 
 }

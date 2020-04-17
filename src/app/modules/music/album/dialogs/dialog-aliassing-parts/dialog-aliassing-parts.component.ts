@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {Cuesheet} from '../../../../../classes/music/Cuesheet';
 import {CFile} from '../../../../../classes/music/CFile';
 import {LcsService} from '../../../services/lcs.service';

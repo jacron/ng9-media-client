@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
-import {MatDialog, MatTableDataSource} from '@angular/material';
+// import {MatDialog, MatTableDataSource} from '@angular/material';
 import {StateService} from '../../../../services/state.service';
 import {MoviesService} from '../../services/movies.service';
 import {Director} from '../../../../classes/movies/Director';
 import {DialogDirectorComponent} from '../../dialogs/dialog-director/dialog-director.component';
 import {DataField} from './DataField';
+import {MatDialog} from '@angular/material/dialog';
+import {MatTableDataSource} from '@angular/material/table';
 
 const dataColumns = [
   'Voornaam', 'Achternaam', 'Geboortejaar', 'Sterfjaar', 'Land', 'nfilms'
@@ -76,7 +78,7 @@ export class DirectorsComponent implements OnInit {
       return;
     }
     const {status, director} = result;
-    switch(status) {
+    switch (status) {
       case 'saved':
         this.saved = director;
         break;

@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {Componist} from '../../../../classes/music/Componist';
-import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 import {MusicService} from '../../services/music.service';
 import {ComponistComponent} from '../../components/componist/componist.component';
 import {BooksService} from '../../../books/services/books.service';

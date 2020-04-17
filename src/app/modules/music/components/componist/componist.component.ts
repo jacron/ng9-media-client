@@ -3,8 +3,10 @@ import {Componist} from '../../../../classes/music/Componist';
 import {MusicService} from '../../services/music.service';
 import {StateService} from '../../../../services/state.service';
 import {DataField} from '../../../movies/components/directors/DataField';
-import {MatDialog, MatTableDataSource} from '@angular/material';
+// import {MatDialog, MatTableDataSource} from '@angular/material';
 import {DialogComponistComponent} from '../../dialogs/dialog-componist/dialog-componist.component';
+import {MatDialog} from '@angular/material/dialog';
+import {MatTableDataSource} from '@angular/material/table';
 
 const dataColumns: string[] = [
   'FirstName',
@@ -82,7 +84,7 @@ export class ComponistComponent implements OnInit {
       return;
     }
     const {status, composer} = result;
-    switch(status) {
+    switch (status) {
       case 'saved':
         this.saved = composer;
         break;
@@ -105,7 +107,7 @@ export class ComponistComponent implements OnInit {
   }
 
   afterGetComponisten(response) {
-    this.componisten = <Componist[]>response;
+    this.componisten = response as Componist[];
     // console.log(this.componisten[0]);
     const title = 'Componisten (' + this.componisten.length + ')';
     this.stateService.setTitle(title);

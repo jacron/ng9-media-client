@@ -3,7 +3,7 @@ import {Album} from '../../../../classes/music/Album';
 import {Tag} from '../../../../classes/music/Tag';
 import {Person} from '../../../../classes/music/Person';
 import {SearchParams} from '../../../../classes/music/SearchParams';
-import {MatDialog} from '@angular/material';
+import {MatDialog} from '@angular/material/dialog';
 import {DialogCustomizeSearchComponent} from '../../../../dialogs/dialog-customize-search/dialog-customize-search.component';
 import {MusicService} from '../../services/music.service';
 import {Choice} from '../../../../classes/music/Choice';
